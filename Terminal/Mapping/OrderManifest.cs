@@ -15,7 +15,8 @@ namespace Terminal.Mapping
             Id(x => x.Id);
             Map(x => x.CisloListecku);
             HasManyToMany(x => x.Stuff)
-                .Cascade.All();
+                .Cascade.All()
+                .Inverse();
         }
     }
 }
